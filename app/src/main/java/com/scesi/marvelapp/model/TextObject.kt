@@ -3,12 +3,15 @@ package com.scesi.marvelapp.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-class Price {
+class TextObject {
     var type: String
-    var price: Double
+    var language: String
+    var text: String
 
     constructor() {
         this.type = ""
-        this.price = 0.00
+        this.language = ""
+        this.text = ""
     }
+
 }

@@ -1,5 +1,8 @@
 package com.scesi.marvelapp.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Data {
     var offset: Int
     var limit: Int

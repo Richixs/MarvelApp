@@ -1,5 +1,8 @@
 package com.scesi.marvelapp.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Item{
     var resourceURI: String
     var name: String

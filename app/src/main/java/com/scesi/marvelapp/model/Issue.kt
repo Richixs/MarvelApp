@@ -3,12 +3,12 @@ package com.scesi.marvelapp.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-class Price {
-    var type: String
-    var price: Double
+class Issue {
+    var resourceURI: String
+    var name: String
 
     constructor() {
-        this.type = ""
-        this.price = 0.00
+        this.resourceURI = ""
+        this.name = ""
     }
 }

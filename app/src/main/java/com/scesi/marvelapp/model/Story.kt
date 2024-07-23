@@ -1,5 +1,8 @@
 package com.scesi.marvelapp.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Story{
     var available: Int
     var collectionURI: String
