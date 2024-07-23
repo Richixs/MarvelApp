@@ -1,5 +1,6 @@
 package com.scesi.marvelapp.controller
 
+import com.scesi.marvelapp.model.Comic
 import java.security.MessageDigest
 
 fun main() {

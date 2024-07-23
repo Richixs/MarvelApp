@@ -1,11 +1,11 @@
 package com.scesi.marvelapp.model
 
-class Url {
+class DateDetail{
     var type: String
-    var url: String
+    var date: String
 
     constructor() {
         this.type = ""
-        this.url = ""
+        this.date = ""
     }
 }
