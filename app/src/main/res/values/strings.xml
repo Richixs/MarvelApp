@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MarvelApp</string>
+    <string name="image_desc">ImageApp\n</string>
 </resources>

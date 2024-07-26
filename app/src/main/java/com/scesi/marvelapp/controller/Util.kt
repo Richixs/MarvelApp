@@ -9,11 +9,16 @@ fun main() {
 //    var timestamp : Long = getTimestamp()
 //    var hash: String = md5(timestamp.toString()+privateKey+publicKey)
 //    println(hash)
+    //473ae699600a2bca73d29ed4b6a9f284
 //    var url: String = "http://gateway.marvel.com/v1/public/comics"
 //    url = url + "?" + "ts=" + timestamp + "&apikey=" + publicKey + "&hash=" + hash
 //    println(url)
     var httpRequest = HttpRequest()
     httpRequest.getRequest()
+    println("---PRUEBA---")
+    for (comic: Comic in httpRequest.comicsRequest.data.results) {
+        println(comic.title)
+    }
 }
 
 //@OptIn(ExperimentalStdlibApi::class)

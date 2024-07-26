@@ -11,13 +11,19 @@ import kotlinx.serialization.*
 import kotlinx.serialization.json.*
 
 class HttpRequest {
+    var comicsRequest: ComicJson
+
+    constructor() {
+        comicsRequest = ComicJson()
+    }
+
     fun getRequest() {
         val publicKey: String = "4b576ce05356aa492171ef1556829c0a"
         val privateKey: String = "45318a8c2bf7cad2890a4495d26534193d7797a1"
         var timestamp : Long = getTimestamp()
         var hash: String = md5(timestamp.toString()+privateKey+publicKey)
-        var url: String = "http://gateway.marvel.com/v1/public/comics"
-        url = url + "?" + "ts=" + timestamp + "&apikey=" + publicKey + "&hash=" + hash
+        var url: String = "https://gateway.marvel.com:443/v1/public/comics"
+        url = url + "?" + "orderBy=title&limit=1&" + "ts=" + timestamp + "&apikey=" + publicKey + "&hash=" + hash
         var urlRequest = URL(url)
         println(urlRequest)
         var connection = urlRequest.openConnection()
@@ -26,7 +32,8 @@ class HttpRequest {
             while (inp.readLine().also { line = it } != null) {
                 val coercingJson = Json { coerceInputValues = true }
                 val obj = coercingJson.decodeFromString<ComicJson>(line)
-                println(obj.toString())
+                comicsRequest = obj
+                println(comicsRequest.toString())
                 var data: Data = obj.data;
                 println("Size: " + data.results.size)
                 for(comic: Comic in data.results) {
