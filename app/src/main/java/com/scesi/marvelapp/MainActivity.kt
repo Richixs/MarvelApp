@@ -5,7 +5,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.scesi.marvelapp.controller.HttpRequest
 import com.scesi.marvelapp.databinding.ActivityMainBinding
+import com.scesi.marvelapp.model.Comic
 import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {

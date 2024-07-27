@@ -15,10 +15,8 @@ fun main() {
 //    println(url)
     var httpRequest = HttpRequest()
     httpRequest.getRequest()
-    println("---PRUEBA---")
-    for (comic: Comic in httpRequest.comicsRequest.data.results) {
-        println(comic.title)
-    }
+    var comic = httpRequest.comicsRequest.data.results[0]
+    println(comic.thumbnail.path + "." + comic.thumbnail.extension)
 }
 
 //@OptIn(ExperimentalStdlibApi::class)

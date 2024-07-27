@@ -23,7 +23,7 @@ class HttpRequest {
         var timestamp : Long = getTimestamp()
         var hash: String = md5(timestamp.toString()+privateKey+publicKey)
         var url: String = "https://gateway.marvel.com:443/v1/public/comics"
-        url = url + "?" + "orderBy=title&limit=1&" + "ts=" + timestamp + "&apikey=" + publicKey + "&hash=" + hash
+        url = url + "?" + "orderBy=title&limit=3&" + "ts=" + timestamp + "&apikey=" + publicKey + "&hash=" + hash
         var urlRequest = URL(url)
         println(urlRequest)
         var connection = urlRequest.openConnection()
